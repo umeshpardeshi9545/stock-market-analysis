@@ -9,10 +9,10 @@ from datetime import timedelta
 # App Configuration
 st.set_page_config(page_title="📈 Apple Stock Predictor", layout="centered")
 st.title("🍏 Apple Stock Price Forecast App")
-st.markdown("Forecast Apple's stock closing price using a trained **ARIMA** model.")
+st.markdown("Forecast Apple's stock closing price using a trained **SRIMA** model.")
 
 # Load ARIMA Model from GitHub
-model_url = "https://raw.githubusercontent.com/umeshpardeshi9545/stock-market-analysis/main/arima_model(1)"
+model_url = "https://raw.githubusercontent.com/umeshpardeshi9545/stock-market-analysis/main/sarima_model"
 
 try:
     with urllib.request.urlopen(model_url) as response:
