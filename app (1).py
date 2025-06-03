@@ -11,12 +11,17 @@ st.title("🍏 Apple Stock Price Forecast App")
 st.markdown("Forecast Apple's stock closing price using a trained **ARIMA** model.")
 
 # Load model
-@st.cache_resource
-def load_model():
-    with open('arima_model (1).pkl', 'rb') as f:
-        return pickle.load(f)
+# Raw URL to the model
+url = "https://raw.githubusercontent.com/umeshpardeshi9545/stock-market-analysis/main/arima_model (1)"
 
-model = load_model()
+# Load the model
+try:
+    with urllib.request.urlopen(url) as response:
+        model_data = response.read()  # Read bytes
+        model = pickle.loads(model_data)  # Load model from bytes
+except Exception as e:
+    model = None
+    st.error(f"Error loading the model: {e}")
 
 # Load data
 df = pd.read_csv('AAPL (4).csv')  # Make sure file name is clean
