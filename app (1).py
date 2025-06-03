@@ -13,7 +13,7 @@ st.markdown("Forecast Apple's stock closing price using a trained **ARIMA** mode
 # Load model
 @st.cache_resource
 def load_model():
-    with open('arima_model.pkl', 'rb') as f:
+    with open('arima_model (1).pkl', 'rb') as f:
         return pickle.load(f)
 
 model = load_model()
