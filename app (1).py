@@ -12,7 +12,7 @@ st.markdown("Forecast Apple's stock closing price using a trained **ARIMA** mode
 
 # Load model
 # Raw URL to the model
-url = "https://raw.githubusercontent.com/umeshpardeshi9545/stock-market-analysis/main/arima_model (1)"
+url = "https://raw.githubusercontent.com/umeshpardeshi9545/stock-market-analysis/main/arima_model(1)"
 
 # Load the model
 try:
@@ -24,7 +24,7 @@ except Exception as e:
     st.error(f"Error loading the model: {e}")
 
 # Load data
-df = pd.read_csv('AAPL (4).csv')  # Make sure file name is clean
+df = pd.read_csv('AAPL(4).csv')  # Make sure file name is clean
 df['Date'] = pd.to_datetime(df['Date'], dayfirst=True)
 df = df.sort_values('Date')
 last_date = df['Date'].max()
