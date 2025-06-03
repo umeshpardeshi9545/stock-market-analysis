@@ -12,7 +12,7 @@ st.title("🍏 Apple Stock Price Forecast App")
 st.markdown("Forecast Apple's stock closing price using a trained **SRIMA** model.")
 
 # Load ARIMA Model from GitHub
-model_url = "https://raw.githubusercontent.com/umeshpardeshi9545/stock-market-analysis/main/sarima_model"
+model_url = "https://raw.githubusercontent.com/umeshpardeshi9545/stock-market-analysis/main/sarima_model.pkl"
 
 try:
     with urllib.request.urlopen(model_url) as response:
